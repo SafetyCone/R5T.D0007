@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.D0007.D0005", "R5T.D000
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.D0005.Base", "..\..\R5T.D0005\source\R5T.D0005.Base\R5T.D0005.Base.csproj", "{4943CD07-6FCB-4811-BD34-B529426DB6BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.D0007.Standard", "R5T.D0007.Standard\R5T.D0007.Standard.csproj", "{9D475865-4DEB-4509-9F54-BCC5CF4BA046}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,18 @@ Global
 		{4943CD07-6FCB-4811-BD34-B529426DB6BE}.Release|x64.Build.0 = Release|Any CPU
 		{4943CD07-6FCB-4811-BD34-B529426DB6BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{4943CD07-6FCB-4811-BD34-B529426DB6BE}.Release|x86.Build.0 = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|x64.Build.0 = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Debug|x86.Build.0 = Debug|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|x64.ActiveCfg = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|x64.Build.0 = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|x86.ActiveCfg = Release|Any CPU
+		{9D475865-4DEB-4509-9F54-BCC5CF4BA046}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
