@@ -1,0 +1,4 @@
+R5T.D0007 - A Base service definition library for the stringly-typed IProgramNameDirectoryNameProvider service.
+
+Goals
+
