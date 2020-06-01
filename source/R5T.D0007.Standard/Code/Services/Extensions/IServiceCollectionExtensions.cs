@@ -2,6 +2,8 @@
 
 using Microsoft.Extensions.DependencyInjection;
 
+using R5T.D0005;
+using R5T.D0005.Standard;
 using R5T.Dacia;
 
 using R5T.D0007.D0005;
@@ -14,9 +16,11 @@ namespace R5T.D0007.Standard
         /// <summary>
         /// Adds the <see cref="IProgramNameDirectoryNameProvider"/> service.
         /// </summary>
-        public static IServiceCollection AddProgramNameDirectoryNameProvider(this IServiceCollection services)
+        public static IServiceCollection AddProgramNameDirectoryNameProvider(this IServiceCollection services,
+            IServiceAction<IProgramNameProvider> programNameProvider)
         {
-            services.AddD0005ProgramNameDirectoryNameProvider();
+            services.AddD0005ProgramNameDirectoryNameProvider(
+                programNameProvider);
 
             return services;
         }
@@ -24,10 +28,36 @@ namespace R5T.D0007.Standard
         /// <summary>
         /// Adds the <see cref="IProgramNameDirectoryNameProvider"/> service.
         /// </summary>
-        public static ServiceAction<IProgramNameDirectoryNameProvider> AddProgramNameDirectoryNameProviderAction(this IServiceCollection services)
+        public static IServiceCollection AddProgramNameDirectoryNameProvider(this IServiceCollection services)
         {
-            var serviceAction = ServiceAction<IProgramNameDirectoryNameProvider>.New(() => services.AddD0005ProgramNameDirectoryNameProvider());
+            services.AddD0005ProgramNameDirectoryNameProvider(
+                services.AddProgramNameProviderAction());
+
+            return services;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="IProgramNameDirectoryNameProvider"/> service.
+        /// </summary>
+        public static IServiceAction<IProgramNameDirectoryNameProvider> AddProgramNameDirectoryNameProviderAction(this IServiceCollection services,
+            IServiceAction<IProgramNameProvider> programNameProvider)
+        {
+            var serviceAction = ServiceAction<IProgramNameDirectoryNameProvider>.New(() => services.AddProgramNameDirectoryNameProvider(
+                programNameProvider));
             return serviceAction;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="IProgramNameDirectoryNameProvider"/> service.
+        /// </summary>
+        public static (
+            IServiceAction<IProgramNameDirectoryNameProvider> programNameDirectoryNameProviderAction,
+            IServiceAction<IProgramNameProvider> programNameProvider) AddProgramNameDirectoryNameProviderAction(this IServiceCollection services)
+        {
+            var output = (
+                programNameDirectoryNameProviderAction: ServiceAction<IProgramNameDirectoryNameProvider>.New(() => services.AddProgramNameDirectoryNameProvider()),
+                programNameProvider: ServiceAction<IProgramNameProvider>.AlreadyAdded);
+            return output;
         }
     }
 }
