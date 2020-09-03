@@ -51,8 +51,8 @@ namespace R5T.D0007.Standard
         /// Adds the <see cref="IProgramNameDirectoryNameProvider"/> service.
         /// </summary>
         public static (
-            IServiceAction<IProgramNameDirectoryNameProvider> programNameDirectoryNameProviderAction,
-            IServiceAction<IProgramNameProvider> programNameProvider) AddProgramNameDirectoryNameProviderAction(this IServiceCollection services)
+            IServiceAction<IProgramNameDirectoryNameProvider> Main,
+            IServiceAction<IProgramNameProvider> ProgramNameProvider) AddProgramNameDirectoryNameProviderAction(this IServiceCollection services)
         {
             var output = (
                 programNameDirectoryNameProviderAction: ServiceAction<IProgramNameDirectoryNameProvider>.New(() => services.AddProgramNameDirectoryNameProvider()),

@@ -16,7 +16,7 @@ namespace R5T.D0007.D0005
             this.ProgramNameProvider = programNameProvider;
         }
 
-        public async Task<string> GetProgramNameDirectoryNameAsync()
+        public async Task<string> GetProgramNameDirectoryName()
         {
             var programName = await this.ProgramNameProvider.GetProgramNameAsync();
 
