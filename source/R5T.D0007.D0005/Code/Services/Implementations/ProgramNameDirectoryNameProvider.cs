@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 
-using R5T.D0005;
+using R5T.D0005;using R5T.T0064;
 
 
 namespace R5T.D0007.D0005
-{
-    public class ProgramNameDirectoryNameProvider : IProgramNameDirectoryNameProvider
+{[ServiceImplementationMarker]
+    public class ProgramNameDirectoryNameProvider : IProgramNameDirectoryNameProvider,IServiceImplementation
     {
         private IProgramNameProvider ProgramNameProvider { get; }
 
